@@ -44,9 +44,11 @@ def run():
 def select_color():
     color_lbl['text']
 
-root = tk.Tk()
-root.title("типо чек бар")
-root.geometry("250x150") 
+
+window = tk.Tk()
+
+window.title("типо чек бар")
+window.geometry("250x150") 
  
 progressbar = tk.Progressbar(orient="horizontal", mode="indeterminate")
 progressbar.pack(fill=X, padx=10, pady=10)
@@ -58,8 +60,6 @@ stop_btn = tk.Button(text="Stop", command=progressbar.stop)
 stop_btn.pack(anchor=SE, side=RIGHT, padx=10, pady=10)
 
 
-
-window = tk.Tk()
 label = tk.Label(window, text="Анализатор текста", font=("Impact", 19), background="#c7730c")
 noun_var = tk.BooleanVar()  # Variable to store the state of Noun checkbox
 verb_var = tk.BooleanVar()  # Variable to store the state of Verb checkbox
@@ -93,5 +93,5 @@ cb_noun.pack(anchor="nw", padx=6, pady=6)  # Display Noun checkbox
 cb_verb.pack(anchor="nw", padx=6, pady=6)  # Display Verb checkbox
 
 
-root.mainloop()
+window.mainloop()
 window.mainloop()

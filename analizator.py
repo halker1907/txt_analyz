@@ -23,7 +23,7 @@ class TextAnalyser:
         self.pos_list = pos_list
         self.width = width
         self.height = height
-        self.chislo = chislo
+        self.chislo = chislo 
         self.read_file()
         self.check_empty_file()
         self.prepare_text()
@@ -86,12 +86,8 @@ class TextAnalyser:
         print(f'В этом тексте {len(self.words)} слов')
         print(f'Отфильтрованные слова: {self.words_by_pos}')
         print(f'В этом тексте {len(self.words_by_pos)} отфильтрованных слов')
-
+"""
     def create_wordcloud(self) -> None:
-        """
-        Создает облако слов на основе отфильтрованных слов и сохраняет его в файл.
-        Возвращает: None.
-        """
         word_counts = collections.Counter(self.words_by_pos)
         top_10_words = word_counts.most_common(self.chislo)
 
@@ -99,3 +95,5 @@ class TextAnalyser:
         image = self.wordcloud.to_image()
         image.save('wordcloud.png')
         print("Облако слов сохранено в файл ")
+        """
+
